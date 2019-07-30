@@ -10,7 +10,7 @@ namespace TelegramGeniusBot.Controllers
     {
         public string Index()
         {
-            return "Genius telegram bot";
+            return "@GeniusLyricsAndMoreBot for telegram";
         }
     }
 }
