@@ -11,6 +11,6 @@ namespace TelegramGeniusBot.Models
 
         public static string Name { get; set; } = "GeniusLyricsAndMoreBot";
 
-        public static string Key { get; set; } = "uniq token";
+        public static string Key { get; set; } = "uniq token feature2";
     }
 }
