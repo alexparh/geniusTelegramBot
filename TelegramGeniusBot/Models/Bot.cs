@@ -8,7 +8,7 @@ using TelegramGeniusBot.Models.Commands;
 
 namespace TelegramGeniusBot.Models
 {
-    public static class Bot //для первичной инициализации бота
+    public static class Bot //for initial bot initialization
     {
         private static TelegramBotClient client;
         private static List<Command> commandList;
@@ -24,7 +24,6 @@ namespace TelegramGeniusBot.Models
 
             commandList = new List<Command>();
             commandList.Add(new HelloCommand());
-            commandList.Add(new LyricsCommand());
             commandList.Add(new StartCommand());
             commandList.Add(new HelpCommand());
             //Add more commands

@@ -156,7 +156,7 @@
     <Compile Include="Models\Commands\Command.cs" />
     <Compile Include="Models\Commands\HelloCommand.cs" />
     <Compile Include="Models\Commands\HelpCommand.cs" />
-    <Compile Include="Models\Commands\LyricsCommand.cs" />
+    <Compile Include="Models\Commands\Lyrics.cs" />
     <Compile Include="Models\Commands\StartCommand.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

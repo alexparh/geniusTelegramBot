@@ -8,6 +8,7 @@ using System.Web.Http;
 using System.Web.Http.Results;
 using Telegram.Bot.Types;
 using TelegramGeniusBot.Models;
+using TelegramGeniusBot.Models.Commands;
 
 namespace TelegramGeniusBot.Controllers
 {
@@ -20,19 +21,21 @@ namespace TelegramGeniusBot.Controllers
             var message = update.Message;
             var client = await Bot.Get();
 
-            foreach (var command in commands)
-            {
-                if (command.Contains(message.Text))
-                {
-                    await Task.Run(() => command.ExecuteAsync(message, client));
-                    return Ok();
-                }
-            }
-
             if (message.Text.Contains(" - "))
             {
-                await Task.Run(() => commands[1].ExecuteAsync(message, client));
+                await Task.Run(() => Lyrics.SendLyricsAsync(message, client));
                 return Ok();
+            }
+            else
+            {
+                foreach (var command in commands)
+                {
+                    if (command.Contains(message.Text))
+                    {
+                        await Task.Run(() => command.ExecuteAsync(message, client));
+                        return Ok();
+                    }
+                }
             }
 
             return Ok();

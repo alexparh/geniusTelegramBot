@@ -10,23 +10,20 @@ using Telegram.Bot.Types;
 
 namespace TelegramGeniusBot.Models.Commands
 {
-    public class LyricsCommand : Command
+    internal static class Lyrics
     {
-        public override string Name => "lyrics";
 
-        string song;
-        string artist;
-
-        ParserWorker<string> parser;
-
-        public override async void ExecuteAsync(Message message, TelegramBotClient client)
+        public static async void SendLyricsAsync(Message message, TelegramBotClient client)
         {
+            ParserWorker<string> parser;
+
             var chatId = message.Chat.Id;
-            status.Add(chatId, true);
             var messageId = message.MessageId;
+
             string[] fullinfo = message.Text.Split(new[] { " - " }, StringSplitOptions.RemoveEmptyEntries);
-            artist = fullinfo[0];
-            song = fullinfo[1];
+
+            string artist = fullinfo[0];
+            string song = fullinfo[1];
             try//parse
             {
                 parser = new ParserWorker<string>(
@@ -38,7 +35,6 @@ namespace TelegramGeniusBot.Models.Commands
             }
             catch
             {
-                parser.Abort();
                 await client.SendTextMessageAsync(chatId, "Sorry, I can not find this song", replyToMessageId: messageId);
             }
 

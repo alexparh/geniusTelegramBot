@@ -10,7 +10,7 @@ namespace TelegramGeniusBot.Models.Commands
     public abstract class Command
     {
         public Dictionary<long, bool> status = new Dictionary<long, bool>();
-        public int i;
+        public static int i;
         public abstract string Name { get; }
         public abstract void ExecuteAsync(Message message, TelegramBotClient client);
         public bool Contains(string command)
