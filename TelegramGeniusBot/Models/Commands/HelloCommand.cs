@@ -15,8 +15,7 @@ namespace TelegramGeniusBot.Models.Commands
         {
             var chatId = message.Chat.Id;
             var messageId = message.MessageId;
-            await client.SendTextMessageAsync(chatId, "Suck ma d*ck, stoopid nigga", replyToMessageId: messageId);
-            client.GetUpdatesAsync();
+            await client.SendTextMessageAsync(chatId, "Hello!", replyToMessageId: messageId);
         }
 
         public override void GetInfo(Message message, TelegramBotClient client)
