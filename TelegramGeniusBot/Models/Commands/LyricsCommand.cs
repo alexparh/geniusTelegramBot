@@ -54,10 +54,5 @@ namespace TelegramGeniusBot.Models.Commands
                 }
             }
         }
-
-        public override void GetInfo(Message message, TelegramBotClient client)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

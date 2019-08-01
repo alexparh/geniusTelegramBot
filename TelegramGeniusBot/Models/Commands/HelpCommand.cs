@@ -19,10 +19,5 @@ namespace TelegramGeniusBot.Models.Commands
 
             await client.SendTextMessageAsync(chatId, "Send me artist and song. \nPlease use this format: Artist - song ", replyToMessageId: messageId);
         }
-
-        public override void GetInfo(Message message, TelegramBotClient client)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

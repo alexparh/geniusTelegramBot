@@ -18,10 +18,5 @@ namespace TelegramGeniusBot.Models.Commands
             await client.SendTextMessageAsync(chatId, "Hello!", replyToMessageId: messageId);
         }
 
-        public override void GetInfo(Message message, TelegramBotClient client)
-        {
-            throw new NotImplementedException();
-        }
-
     }
 }
