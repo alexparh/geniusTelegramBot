@@ -1,10 +1,6 @@
 ﻿using GeniusParser.Core;
 using GeniusParser.Core.Genius;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Http;
 using Telegram.Bot;
 using Telegram.Bot.Types;
 

@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using Telegram.Bot;
 using TelegramGeniusBot.Models.Commands;
@@ -24,8 +21,8 @@ namespace TelegramGeniusBot.Models
 
             commandList = new List<Command>();
             commandList.Add(new HelloCommand());
-            commandList.Add(new StartCommand());
             commandList.Add(new HelpCommand());
+            commandList.Add(new StartCommand());
             //Add more commands
             client = new TelegramBotClient(AppSettings.Key);
             var hook = string.Format(AppSettings.Url, "api/message/update");
